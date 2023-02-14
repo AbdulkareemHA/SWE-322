@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4</title>
+
+    <style>
+			body {background-color: Lightgray;} 
+	</style>
+</head>
+<body>
+
+    <?php
+
+
+        $classmates = array("Abdulkareem", "khalid", "Ali"); 
+
+
+        $course = array("CIS 316"=>"Artificial Intelligence", "SWE 322"=>"Advanced Web", "SWE 401"=>"Quality Assurance", "SWE 321"=>"Advanced User Interface Design");
+
+    
+
+        $device = array (
+        array("Laptop","Asus","MSI"),
+        array("CPU","AMD","Intel"),
+        array("GPU","AMD","Nvidia")
+        );
+
+    ?>
+        <!-- Part 1, Indexed Array -->
+        <div>
+            <h1> ClassMates Names </h1><br>
+            <?php    
+
+                $length = count($classmates);
+
+                /* Using the for loop to print the names of classmates  */
+                for($i = 0; $i < $length; $i++) 
+                {
+                echo $classmates[$i];
+                echo "<br>";
+                }
+
+            ?>
+        </div>
+        <hr>
+
+    <!-- Part 2, Associative Array, the courses that i have:   -->
+        <div>
+            <h1> Course code and Course Names of the courses I have: </h1><br>
+            <?php    
+
+                /* Using the for each loop to print the course code and course name   */
+                foreach($course as $i => $i_value) {
+                    echo "Course Code (key) : " . $i . ", Course Name (value) : " . $i_value;
+                    echo "<br>";
+                }
+                
+            ?>
+        </div>
+        <hr>
+
+    <!-- Part 3, Multidimensional Array  -->
+        <div>
+            <h1> Printing values for the Multidimensional Array </h1><br>
+            <?php    
+
+                echo '"I am looking for for '.$device[0][1].' '.$device[0][0].' with '.$device[1][1].' '.$device[1][0].' and '.$device[2][2].' '.$device[2][0].'".';
+                
+            ?>
+        </div>
+        <hr>
+
+</body>
+</html>
